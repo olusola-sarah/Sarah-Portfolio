@@ -1,0 +1,28 @@
+*{
+    font-family: "Playwrite GB S", cursive;
+}
+/* @keyframes border-color-animation {
+    0% {
+        border-color: purple;
+    }
+
+    25% {
+        border-color: blue;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    75% {
+        border-color: yellow;
+    }
+
+    100% {
+        border-color: purple;
+    }
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
