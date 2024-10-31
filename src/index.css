@@ -1,6 +1,24 @@
 *{
     font-family: "Playwrite GB S", cursive;
 }
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+}
+.opacity-50 {
+    opacity: 0.5;
+    /* Dull effect */
+}
+
+.opacity-100 {
+    opacity: 1;
+    /* Fully visible */
+}
 /* @keyframes border-color-animation {
     0% {
         border-color: purple;

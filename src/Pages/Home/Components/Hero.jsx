@@ -1,14 +1,13 @@
 import React from "react";
 import profileImg from "./Assets/profileImg.jpg";
 import Button from "./Button";
-// import Work from "./Work";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col justify-center items-center pt-6">
+    <div className="flex justify-center items-center pt-10">
       <div className="w-2/3 flex flex-col items-center">
         {/* Container for image, heading, and subheading */}
-        <div className="flex items-center justify-between mb-6 w-full">
+        <div className="flex mb-6">
           <div className="flex flex-col items-start">
             <h1 className="text-5xl font-bold mb-1">Hi, I'm Sarah 👋 </h1>
             <h2 className="text-2xl font-semibold">
@@ -42,9 +41,6 @@ const Hero = () => {
         <div className="mt-5">
           <Button />
         </div>
-        {/* <div className="mt-5">
-          <Work />
-        </div> */}
       </div>
     </div>
   );
