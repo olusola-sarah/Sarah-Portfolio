@@ -1,3 +1,5 @@
+// Home.js
+
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -32,7 +34,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center items-start min-h-screen pt-10 overflow-hidden">
-      <div className="w-2/3 space-y-10">
+      <div className="w-full md:w-2/3 space-y-10 px-4 md:px-0">
         <motion.div
           ref={refHero}
           variants={fadeInUp}
@@ -41,7 +43,7 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className={`transition-opacity duration-500 ${
             inViewHero ? "opacity-100" : "opacity-50"
-          }`} 
+          }`}
         >
           <Hero />
         </motion.div>
@@ -54,7 +56,7 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className={`transition-opacity duration-500 ${
             inViewWork ? "opacity-100" : "opacity-50"
-          }`} 
+          }`}
         >
           <Work />
         </motion.div>

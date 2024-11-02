@@ -1,6 +1,7 @@
+// Education.js
+
 import React from "react";
 
-// Sample education experience data
 const educationExperiences = [
   {
     school: "University of Example",
@@ -18,21 +19,25 @@ const educationExperiences = [
 
 const Education = () => {
   return (
-    <div className="w-2/3 mx-auto">
-      <h2 className="text-xl font-bold mb-6">Education</h2>
+    <div className="w-full md:w-2/3 mx-auto px-4 md:px-0">
+      <h2 className="text-lg md:text-xl font-bold mb-6">Education</h2>
       {educationExperiences.map((education, index) => (
-        <div key={index} className="flex mb-8 items-start">
+        <div key={index} className="flex items-center mb-8">
           <img
             src={education.logo}
             alt={`${education.school} logo`}
-            className="w-10 h-10 rounded-full mr-4"
+            className="w-8 h-8 md:w-10 md:h-10 rounded-full mr-4"
           />
-          <div className="flex flex-col w-full">
-            <div className="flex justify-between items-center">
-              <h3 className="text-sm font-semibold">{education.school}</h3>
-              <p className="text-gray-500 text-xs">{education.duration}</p>
-            </div>
-            <p className="text-gray-600 text-xs mt-1">{education.degree}</p>
+          <div className="flex flex-col">
+            <h3 className="text-sm md:text-base font-semibold">
+              {education.school}
+            </h3>
+            <p className="text-xs md:text-sm text-gray-500">
+              {education.degree}
+            </p>
+            <p className="text-xs md:text-sm text-gray-500">
+              {education.duration}
+            </p>
           </div>
         </div>
       ))}

@@ -4,19 +4,19 @@ import { HiChevronRight } from "react-icons/hi";
 // Sample work experience data
 const workExperiences = [
   {
-    company: "GoLearn",
-    position: "Lead Front-end Developer",
-    duration: "February 2024 - Present",
+    company: "PickMeUp Innovations",
+    position: "Front-end Developer",
+    duration: "December 2023 - Present",
     description:
-      "Serving as the Lead Front-End Developer at Golearn, an online learning web app startup. Leading the development of user interfaces, ensuring a seamless and engaging user experience. Collaborated with cross-functional teams to design and implement new features, driving the platform’s growth and user engagement. Mentored junior developers and maintained high standards of code quality and performance.",
+      "Developing and optimizing user-friendly, dynamic web pages, improving site usability and customer engagement. Collaborating with cross-functional teams to brainstorm and implement strategies, resulting in tailored, user-specific designs that enhance overall user satisfaction. Ensuring seamless website performance across multiple browsers and platforms, contributing to a significant increase in cross-platform compatibility and a sharp reduction in website loading times.",
     logo: "https://via.placeholder.com/40",
   },
   {
-    company: "Ogenki",
+    company: "GRAZAC Innovations",
     position: "Front-end Developer",
-    duration: "January 2024 - Present",
+    duration: "May 2021 - Oct. 2021",
     description:
-      "Working as a Front-End Developer at Ogenki, a promising startup, where I was responsible for building and enhancing user interfaces. Collaborated with the design and development teams to create responsive and visually appealing web applications. Played a key role in improving user experience and implementing new features to support the company’s growth.",
+      "Efficiently used tools like JavaScript and CSS to create user-friendly interfaces for websites. Collaborated with other team members to create unique and specifically tailored websites.",
     logo: "https://via.placeholder.com/40",
   },
   {
@@ -37,39 +37,50 @@ const Work = () => {
   };
 
   return (
-    <div className="w-2/3 mx-auto">
-      <h2 className="text-xl font-bold mb-6">Work Experience</h2>
+    <div className="w-full md:w-2/3 mx-auto px-4 md:px-0">
+      <h2 className="text-lg md:text-xl font-bold mb-6 md:text-left">
+        Work Experience
+      </h2>
       {workExperiences.map((experience, index) => (
-        <div key={index} className="flex mb-8 items-start group">
+        <div
+          key={index}
+          className="flex flex-col md:flex-row mb-8 items-start group"
+        >
           <img
             src={experience.logo}
             alt={`${experience.company} logo`}
-            className="w-10 h-10 rounded-full mr-4"
+            className="w-10 h-10 rounded-full mr-4 mb-4 md:mb-0"
           />
           <div className="flex flex-col w-full">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center relative">
-                <h3 className="text-sm font-semibold">{experience.company}</h3>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+              <div className="flex items-center relative mb-2 md:mb-0">
+                <h3 className="text-sm md:text-base font-semibold">
+                  {experience.company}
+                </h3>
 
                 {/* Animated dropdown button with React icon */}
                 <HiChevronRight
-                  className={`ml-2 text-gray-800 focus:outline-none transform transition-transform duration-200 absolute left-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out ${
+                  className={`ml-2 text-gray-800 transform transition-transform duration-200 absolute left-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out ${
                     openDescription === index ? "rotate-90" : "rotate-0"
                   }`}
-                  size={16} // Smaller size
+                  size={16} // Smaller size for mobile
                   onClick={() => toggleDescription(index)}
                   aria-label="Toggle Description"
                   style={{ cursor: "pointer", fontWeight: "bold" }} // Bolder appearance
                 />
               </div>
-              <p className="text-gray-500 text-xs">{experience.duration}</p>
+              <p className="text-gray-500 text-xs md:text-sm">
+                {experience.duration}
+              </p>
             </div>
-            <p className="text-gray-600 text-xs">{experience.position}</p>
+            <p className="text-gray-600 text-xs md:text-sm">
+              {experience.position}
+            </p>
 
             {/* Toggleable description with smooth animation */}
             <div
-              className={`text-gray-700 text-xs mt-2 transition-all duration-300 ease-in-out overflow-hidden ${
-                openDescription === index ? "max-h-20" : "max-h-0"
+              className={`text-gray-700 text-xs md:text-sm mt-2 transition-all duration-300 ease-in-out overflow-hidden ${
+                openDescription === index ? "max-h-40" : "max-h-0"
               }`}
               style={{ transition: "max-height 0.3s ease-in-out" }}
             >
