@@ -22,10 +22,26 @@ const Footer = () => {
 
   // Icon data
   const icons = [
-    { name: "Twitter", icon: <FaTwitter size={22} /> },
-    { name: "LinkedIn", icon: <FaLinkedin size={22} /> },
-    { name: "GitHub", icon: <FaGithub size={22} /> },
-    { name: "WhatsApp", icon: <FaWhatsapp size={22} /> },
+    {
+      name: "Twitter",
+      icon: <FaTwitter size={22} />,
+      url: "https://twitter.com/KorodeOlusola",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin size={22} />,
+      url: "https://www.linkedin.com/in/sarah-olusola",
+    },
+    {
+      name: "GitHub",
+      icon: <FaGithub size={22} />,
+      url: "https://github.com/olusola-sarah",
+    },
+    {
+      name: "WhatsApp",
+      icon: <FaWhatsapp size={22} />,
+      url: "https://wa.me/09091136262",
+    },
   ];
 
   return (
@@ -44,7 +60,7 @@ const Footer = () => {
             onMouseLeave={() => setHoveredIcon(null)}
           >
             <a
-              href={`https://${item.name.toLowerCase()}.com/`}
+              href={item.url}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:scale-110 transition-transform duration-200 group"

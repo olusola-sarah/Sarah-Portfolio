@@ -27,6 +27,22 @@ const workExperiences = [
       "Worked on a short-term contract to enhance the Swift Aboki website’s responsiveness on mobile devices. Optimized the site’s design and functionality for various screen sizes, ensuring a seamless user experience across all devices.",
     logo: "https://via.placeholder.com/40",
   },
+  {
+    company: "SwiftAboki",
+    position: "Front-end Developer (Contract)",
+    duration: "January 2023 - October 2023",
+    description:
+      "Worked on a short-term contract to enhance the Swift Aboki website’s responsiveness on mobile devices. Optimized the site’s design and functionality for various screen sizes, ensuring a seamless user experience across all devices.",
+    logo: "https://via.placeholder.com/40",
+  },
+  {
+    company: "SwiftAboki",
+    position: "Front-end Developer (Contract)",
+    duration: "January 2023 - October 2023",
+    description:
+      "Worked on a short-term contract to enhance the Swift Aboki website’s responsiveness on mobile devices. Optimized the site’s design and functionality for various screen sizes, ensuring a seamless user experience across all devices.",
+    logo: "https://via.placeholder.com/40",
+  },
 ];
 
 const Work = () => {
@@ -37,58 +53,60 @@ const Work = () => {
   };
 
   return (
-    <div className="w-full md:w-2/3 mx-auto px-4 md:px-0">
-      <h2 className="text-lg md:text-xl font-bold mb-6 md:text-left">
-        Work Experience
-      </h2>
-      {workExperiences.map((experience, index) => (
-        <div
-          key={index}
-          className="flex flex-col md:flex-row mb-8 items-start group"
-        >
-          <img
-            src={experience.logo}
-            alt={`${experience.company} logo`}
-            className="w-10 h-10 rounded-full mr-4 mb-4 md:mb-0"
-          />
-          <div className="flex flex-col w-full">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-              <div className="flex items-center relative mb-2 md:mb-0">
-                <h3 className="text-sm md:text-base font-semibold">
-                  {experience.company}
-                </h3>
+    <div className="flex justify-center items-center pt-10">
+      <div className="w-full md:w-2/3 mx-auto px-4 md:px-0">
+        <h2 className="text-lg md:text-xl font-bold mb-6 text-left">
+          Work Experience
+        </h2>
+        {workExperiences.map((experience, index) => (
+          <div
+            key={index}
+            className="flex flex-col md:flex-row mb-8 items-start group"
+          >
+            <img
+              src={experience.logo}
+              alt={`${experience.company} logo`}
+              className="w-10 h-10 rounded-full mr-4 mb-4 md:mb-0"
+            />
+            <div className="flex flex-col w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center relative mb-2">
+                  <h3 className="text-sm md:text-base font-semibold">
+                    {experience.company}
+                  </h3>
 
-                {/* Animated dropdown button with React icon */}
-                <HiChevronRight
-                  className={`ml-2 text-gray-800 transform transition-transform duration-200 absolute left-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out ${
-                    openDescription === index ? "rotate-90" : "rotate-0"
-                  }`}
-                  size={16} // Smaller size for mobile
-                  onClick={() => toggleDescription(index)}
-                  aria-label="Toggle Description"
-                  style={{ cursor: "pointer", fontWeight: "bold" }} // Bolder appearance
-                />
+                  {/* Animated dropdown button with React icon */}
+                  <HiChevronRight
+                    className={`ml-2 text-gray-800 transform transition-transform duration-200 absolute left-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out ${
+                      openDescription === index ? "rotate-90" : "rotate-0"
+                    }`}
+                    size={16}
+                    onClick={() => toggleDescription(index)}
+                    aria-label="Toggle Description"
+                    style={{ cursor: "pointer", fontWeight: "bold" }}
+                  />
+                </div>
+                <p className="text-gray-500 text-xs md:text-sm">
+                  {experience.duration}
+                </p>
               </div>
-              <p className="text-gray-500 text-xs md:text-sm">
-                {experience.duration}
+              <p className="text-gray-600 text-xs md:text-sm">
+                {experience.position}
               </p>
-            </div>
-            <p className="text-gray-600 text-xs md:text-sm">
-              {experience.position}
-            </p>
 
-            {/* Toggleable description with smooth animation */}
-            <div
-              className={`text-gray-700 text-xs md:text-sm mt-2 transition-all duration-300 ease-in-out overflow-hidden ${
-                openDescription === index ? "max-h-40" : "max-h-0"
-              }`}
-              style={{ transition: "max-height 0.3s ease-in-out" }}
-            >
-              {experience.description}
+              {/* Toggleable description with smooth animation */}
+              <div
+                className={`text-gray-700 text-xs md:text-sm mt-2 transition-all duration-300 ease-in-out overflow-hidden ${
+                  openDescription === index ? "max-h-40" : "max-h-0"
+                }`}
+                style={{ transition: "max-height 0.3s ease-in-out" }}
+              >
+                {experience.description}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
