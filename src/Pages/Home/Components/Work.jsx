@@ -9,7 +9,6 @@ const workExperiences = [
     duration: "December 2023 - Present",
     description:
       "Developing and optimizing user-friendly, dynamic web pages, improving site usability and customer engagement. Collaborating with cross-functional teams to brainstorm and implement strategies, resulting in tailored, user-specific designs that enhance overall user satisfaction. Ensuring seamless website performance across multiple browsers and platforms, contributing to a significant increase in cross-platform compatibility and a sharp reduction in website loading times.",
-    logo: "https://via.placeholder.com/40",
   },
   {
     company: "GRAZAC Innovations",
@@ -17,7 +16,6 @@ const workExperiences = [
     duration: "May 2021 - Oct. 2021",
     description:
       "Efficiently used tools like JavaScript and CSS to create user-friendly interfaces for websites. Collaborated with other team members to create unique and specifically tailored websites.",
-    logo: "https://via.placeholder.com/40",
   },
   {
     company: "SwiftAboki",
@@ -25,7 +23,6 @@ const workExperiences = [
     duration: "January 2023 - October 2023",
     description:
       "Worked on a short-term contract to enhance the Swift Aboki website’s responsiveness on mobile devices. Optimized the site’s design and functionality for various screen sizes, ensuring a seamless user experience across all devices.",
-    logo: "https://via.placeholder.com/40",
   },
   {
     company: "SwiftAboki",
@@ -33,7 +30,6 @@ const workExperiences = [
     duration: "January 2023 - October 2023",
     description:
       "Worked on a short-term contract to enhance the Swift Aboki website’s responsiveness on mobile devices. Optimized the site’s design and functionality for various screen sizes, ensuring a seamless user experience across all devices.",
-    logo: "https://via.placeholder.com/40",
   },
   {
     company: "SwiftAboki",
@@ -41,7 +37,6 @@ const workExperiences = [
     duration: "January 2023 - October 2023",
     description:
       "Worked on a short-term contract to enhance the Swift Aboki website’s responsiveness on mobile devices. Optimized the site’s design and functionality for various screen sizes, ensuring a seamless user experience across all devices.",
-    logo: "https://via.placeholder.com/40",
   },
 ];
 
@@ -63,11 +58,7 @@ const Work = () => {
             key={index}
             className="flex flex-col md:flex-row mb-8 items-start group"
           >
-            <img
-              src={experience.logo}
-              alt={`${experience.company} logo`}
-              className="w-10 h-10 rounded-full mr-4 mb-4 md:mb-0"
-            />
+            {/*Removed the image tag here */}
             <div className="flex flex-col w-full">
               <div className="flex justify-between items-center">
                 <div className="flex items-center relative mb-2">
