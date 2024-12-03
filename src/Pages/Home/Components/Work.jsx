@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiChevronRight } from "react-icons/hi";
 
-// Sample work experience data
+// work experience data
 const workExperiences = [
   {
     company: "PickMeUp Innovations",
